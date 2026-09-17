@@ -115,6 +115,8 @@ h3 { line-height:1.15; }
 .service-card p { font-size:13px; color:var(--ink-soft); margin:0; }
 .profile { display:grid; grid-template-columns:160px 1fr; gap:28px; align-items:center; background:var(--ink); color:#fff; padding:36px; }
 .profile-photo { width:140px; height:140px; border-radius:50%; object-fit:cover; border:4px solid var(--sun); }
+.professional-hero { display:grid; grid-template-columns:280px 1fr; gap:56px; align-items:center; }
+.professional-photo { width:100%; max-width:280px; aspect-ratio:4/5; object-fit:cover; }
 .avatar { width:140px; height:140px; border-radius:50%; display:grid; place-items:center; background:var(--sun); color:var(--ink); font-family:Fraunces,serif; font-size:55px; }
 .profile h2 { font-size:38px; margin:13px 0 5px; }
 .profile p { color:#c9ddd4; }
@@ -206,3 +208,4 @@ textarea { min-height:110px; resize:vertical; }
 .cta-band { margin-top:0; margin-bottom:80px; }
 @media (max-width:900px) { .hero-home .hero-grid { grid-template-columns:1fr; } .hero-quote { display:none; } .editorial-grid { grid-template-columns:1fr 1fr; } .editorial-card:first-child { grid-row:span 2; margin-top:0; } .family-feature { grid-template-columns:1fr; gap:38px; } .country-section .country-grid { grid-template-columns:repeat(3,1fr); } }
 @media (max-width:600px) { .hero-home { min-height:650px; } .hero-home .hero-grid { padding:90px 0 50px; } .hero-home h1 { font-size:58px; } .hero-home .lede { font-size:18px; } .map-shell { height:520px; } .map-card { left:16px; right:16px; bottom:16px; width:auto; } .editorial-grid { grid-template-columns:1fr; } .editorial-card:first-child { grid-row:auto; } .editorial-card:first-child .editorial-image,.editorial-image { height:245px; } .family-art { min-height:380px; } .family-links { grid-template-columns:1fr; } .family-links a:nth-child(odd) { margin-right:0; } .country-section .country-grid { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .professional-hero { grid-template-columns:1fr; } .professional-photo { max-width:220px; } .hero-slides { right:5vw; bottom:22px; } }
