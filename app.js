@@ -5,7 +5,18 @@ const link = (path, label, className = '') => `<a class="${className}" href="${p
 const pageHero = (eyebrow, title, text) => `<section class="page-hero"><div class="container"><div class="breadcrumb">${eyebrow}</div><h1>${title}</h1><p>${text}</p></div></section>`;
 
 function header() {
-  return `<header class="site-header"><a class="wordmark" href="/">BRAZILIANS.ME<span>BRASILEIROS VIVENDO O MUNDO.</span></a><nav class="nav" id="main-nav"><div class="nav-group"><a href="/">Explorar</a></div><details class="nav-group"><summary>Países</summary><div class="nav-menu nav-countries">${countries.map(country => link(`/${country.slug}`, `${country.flag} ${country.name}`)).join('')}</div></details><details class="nav-group"><summary>Vida fora</summary><div class="nav-menu">${link('/familia', 'Família 360°')}${link('/plh', 'Português de herança')}${link('/trabalho', 'Trabalho e carreira')}${link('/saude', 'Saúde e bem-estar')}${link('/ferramentas', 'Ferramentas')}</div></details><details class="nav-group"><summary>Conexões</summary><div class="nav-menu">${link('/servicos', 'Serviços e profissionais')}${link('/historias', 'Histórias')}${link('/comunidade', 'Comunidade')}${link('/participar', 'Enviar uma pauta')}</div></details><a class="nav-cta" href="/participar">Quero participar</a></nav><button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button></header>`;
+  return `<header class="site-header"><a class="wordmark" href="/"><span class="wordmark-mark">B</span>BRAZILIANS.ME<span>BRASILEIROS VIVENDO O MUNDO.</span></a><nav class="nav" id="main-nav"><div class="nav-group"><a href="/">Explorar</a></div><details class="nav-group"><summary>Países</summary><div class="nav-menu nav-countries">${countries.map(country => link(`/${country.slug}`, `${country.flag} ${country.name}`)).join('')}</div></details><details class="nav-group"><summary>Vida fora</summary><div class="nav-menu">${link('/familia', 'Família 360°')}${link('/plh', 'Português de herança')}${link('/trabalho', 'Trabalho e carreira')}${link('/saude', 'Saúde e bem-estar')}${link('/ferramentas', 'Ferramentas')}</div></details><details class="nav-group"><summary>Conexões</summary><div class="nav-menu">${link('/servicos', 'Serviços e profissionais')}${link('/historias', 'Histórias')}${link('/comunidade', 'Comunidade')}${link('/participar', 'Enviar uma pauta')}</div></details><a class="nav-cta" href="/participar">Quero participar <span>↗</span></a></nav><button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button></header>`;
+}
+
+function initHero() {
+  const hero = document.querySelector('.hero-image');
+  if (!hero) return;
+  const images = JSON.parse(hero.dataset.images);
+  let current = 0;
+  const show = index => { hero.style.backgroundImage = `linear-gradient(90deg,rgba(8,39,39,.88) 0%,rgba(8,39,39,.53) 47%,rgba(8,39,39,.14) 100%),url('${images[index]}')`; document.querySelectorAll('.hero-dot').forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index)); };
+  document.querySelectorAll('.hero-dot').forEach((dot, index) => dot.addEventListener('click', () => { current = index; show(current); }));
+  show(current);
+  window.setInterval(() => { current = (current + 1) % images.length; show(current); }, 5000);
 }
 
 function footer() {
