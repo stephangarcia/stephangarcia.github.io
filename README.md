@@ -28,6 +28,8 @@ Abra a URL informada pelo comando. Para uma opção sem instalação, também é
 - `/participar` — formulário visual de contribuição
 - `/estados-unidos`, `/espanha`, `/japao`, `/irlanda` — páginas iniciais demonstrativas
 
+As rotas possuem arquivos `index.html` próprios porque o GitHub Pages não faz rewrite automático de URLs para uma SPA estática. Isso permite abrir diretamente, por exemplo, `/familia` ou `/japao` sem receber `404`.
+
 ## Fontes e mapa
 
 O mapa usa Leaflet e tiles públicos do OpenStreetMap, com atribuição visível no mapa. Os pins representam Portugal, Estados Unidos, Espanha, Japão, Irlanda, França, Austrália e Canadá; são pontos de entrada editoriais, não estatísticas populacionais.
