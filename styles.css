@@ -146,6 +146,53 @@ h3 { line-height:1.15; }
 .editorial-card[tabindex] { cursor:pointer; }
 .editorial-card[tabindex]:focus-visible { outline:3px solid var(--sun); outline-offset:4px; }
 .editorial-action { display:block; padding:0 22px 20px; color:var(--coral); font-size:12px; font-weight:700; }
+.topic-hero { min-height:420px; display:flex; align-items:flex-end; padding:80px 0 65px; color:#fff; background:linear-gradient(90deg,rgba(23,59,59,.92),rgba(23,59,59,.35)),var(--topic-image) center/cover; }
+.topic-hero h1 { max-width:800px; margin:18px 0 15px; }
+.topic-hero p { max-width:620px; font-size:20px; color:#e3eee8; }
+.topic-feature-image { width:100%; height:420px; object-fit:cover; }
+.rich-card-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.rich-card { display:flex; flex-direction:column; min-height:360px; border:1px solid var(--line); background:var(--paper); transition:transform .2s, box-shadow .2s; }
+.rich-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
+.rich-card-image { height:150px; background:linear-gradient(180deg,transparent,rgba(23,59,59,.4)),var(--card-image) center/cover; }
+.rich-card > div:last-child { padding:20px; }
+.rich-card-number { color:var(--coral); font-size:11px; font-weight:700; letter-spacing:.14em; }
+.rich-card h3 { margin:14px 0 8px; font-family:Fraunces,serif; font-size:25px; font-weight:500; }
+.rich-card p { color:var(--ink-soft); font-size:14px; }
+.topic-quote { background:var(--ink); color:#fff; }
+.topic-quote p { max-width:780px; font-family:Fraunces,serif; font-size:clamp(30px,4vw,52px); line-height:1.08; }
+.service-image-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.service-image-card, .community-city { min-height:230px; padding:22px; display:flex; flex-direction:column; justify-content:space-between; color:#fff; background:linear-gradient(180deg,rgba(23,59,59,.15),rgba(23,59,59,.88)),var(--card-image) center/cover; transition:transform .2s; }
+.service-image-card:hover, .community-city:hover { transform:translateY(-5px); }
+.service-image-card span { font-family:Fraunces,serif; font-size:30px; }
+.service-image-card strong, .community-city strong { color:#f4c95d; font-size:12px; }
+.profile-feature { grid-template-columns:140px 1fr; }
+.story-feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.story-rich { padding:0; overflow:hidden; }
+.story-rich summary { display:grid; grid-template-columns:1fr 1fr; }
+.story-rich-image { min-height:300px; background-position:center; background-size:cover; display:flex; align-items:flex-start; padding:20px; color:#fff; font-family:Fraunces,serif; font-size:34px; }
+.story-rich-copy { padding:24px; }
+.story-rich-copy h2 { font-size:30px; margin:18px 0; }
+.story-open { color:var(--coral); font-size:12px; font-weight:700; }
+.story-rich > p { padding:0 24px 24px; margin:0; }
+.community-city-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
+.community-city { min-height:260px; }
+.community-city span { font-size:30px; }
+.community-city h3 { font-family:Fraunces,serif; font-size:28px; margin:0; }
+.question-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.question-card, .tool-card { text-align:left; border:1px solid var(--line); background:var(--paper); padding:22px; color:var(--ink); }
+.question-card:hover, .tool-card:hover { border-color:var(--coral); transform:translateY(-3px); }
+.question-card span { display:block; color:var(--coral); font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; margin-bottom:25px; }
+.question-card strong { font-family:Fraunces,serif; font-size:24px; font-weight:500; }
+.community-message { min-height:24px; margin:20px 0 0; color:var(--coral); font-weight:700; }
+.tool-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.tool-card { display:block; min-height:350px; transition:transform .2s, border-color .2s; }
+.tool-image { display:block; height:160px; margin:-22px -22px 20px; background-position:center; background-size:cover; }
+.tool-card h3 { margin:14px 0 8px; font-family:Fraunces,serif; font-size:27px; }
+.tool-card p { color:var(--ink-soft); font-size:14px; }
+.tool-card strong { display:block; color:var(--coral); font-size:12px; margin-top:22px; }
+.country-intro-image { min-height:330px; display:flex; align-items:flex-end; padding:24px; color:#fff; background:linear-gradient(transparent,rgba(23,59,59,.75)),var(--card-image) center/cover; }
+.country-intro-image span { font-family:Fraunces,serif; font-size:34px; }
+.country-cta { background:var(--sun); }
 .avatar { width:140px; height:140px; border-radius:50%; display:grid; place-items:center; background:var(--sun); color:var(--ink); font-family:Fraunces,serif; font-size:55px; }
 .profile h2 { font-size:38px; margin:13px 0 5px; }
 .profile p { color:#c9ddd4; }
@@ -240,3 +287,5 @@ textarea { min-height:110px; resize:vertical; }
 @media (max-width:600px) { .professional-hero { grid-template-columns:1fr; } .professional-photo { max-width:220px; } .hero-slides { right:5vw; bottom:22px; } }
 @media (max-width:600px) { .professional-cover { padding:55px 0; } .professional-intro { grid-template-columns:1fr; gap:30px; } .professional-intro img { max-width:230px; } .professional-intro h2 { font-size:25px; } .professional-gallery { grid-template-columns:1fr 1fr; } .professional-gallery img { height:230px; } }
 @media (max-width:600px) { .hero-home { min-height:0; height:max(560px, calc(100dvh - 60px)); } }
+@media (max-width:900px) { .rich-card-grid { grid-template-columns:repeat(2,1fr); } .service-image-grid { grid-template-columns:repeat(2,1fr); } .community-city-grid { grid-template-columns:repeat(3,1fr); } .tool-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:600px) { .topic-hero { min-height:360px; padding:55px 0 42px; } .topic-hero h1 { font-size:48px; } .topic-hero p { font-size:17px; } .rich-card-grid,.service-image-grid,.story-feature-grid,.question-grid,.tool-grid { grid-template-columns:1fr; } .community-city-grid { grid-template-columns:1fr 1fr; } .story-rich summary { grid-template-columns:1fr; } .story-rich-image { min-height:220px; } .profile-feature { grid-template-columns:1fr; } }
