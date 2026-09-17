@@ -28,6 +28,12 @@ Abra a URL informada pelo comando. Para uma opção sem instalação, também é
 - `/participar` — formulário visual de contribuição
 - `/estados-unidos`, `/espanha`, `/japao`, `/irlanda` — páginas iniciais demonstrativas
 
+## Fontes e mapa
+
+O mapa usa Leaflet e tiles públicos do OpenStreetMap, com atribuição visível no mapa. Os pins representam Portugal, Estados Unidos, Espanha, Japão, Irlanda, França, Austrália e Canadá; são pontos de entrada editoriais, não estatísticas populacionais.
+
+A direção editorial foi pesquisada a partir das páginas públicas de [Brasileiras pelo Mundo](https://www.brasileiraspelomundo.com/) e [Brasileiros no Exterior](https://www.brasileirosnoexterior.org/). O protótipo usa temas e referências de cobertura, mas não reproduz artigos ou textos protegidos. As imagens da homepage vêm do Unsplash e são apenas ambientação visual.
+
 ## Escopo
 
 Os dados são ilustrativos e estão separados em `data.js`. Não há autenticação, banco de dados, pagamentos, comunidade real, profissionais reais ou envio de formulário. Estatísticas e perfis aparecem explicitamente marcados como demonstrativos.
