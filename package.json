@@ -1,0 +1,24 @@
+{
+  "name": "stephangarcia.github.io",
+  "version": "1.0.0",
+  "description": "Protótipo navegável do portal 360° para brasileiros vivendo fora do Brasil.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephangarcia/stephangarcia.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/stephangarcia/stephangarcia.github.io/issues"
+  },
+  "homepage": "https://github.com/stephangarcia/stephangarcia.github.io#readme",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
