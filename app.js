@@ -210,6 +210,6 @@ function render() {
   document.querySelector('#participate-form')?.addEventListener('submit', event => { event.preventDefault(); document.querySelector('#form-message').textContent = 'Obrigado. Esta contribuição é apenas uma simulação do protótipo.'; event.target.reset(); });
 }
 
-document.addEventListener('click', event => { const anchor = event.target.closest('a'); if (!anchor || !anchor.href.startsWith(window.location.origin) || anchor.target === '_blank') return; event.preventDefault(); const samePage = anchor.pathname === window.location.pathname && anchor.hash; history.pushState({}, '', anchor.pathname + anchor.hash); render(); if (samePage) document.querySelector(anchor.hash)?.scrollIntoView({ behavior: 'smooth' }); });
+document.addEventListener('click', event => { const anchor = event.target.closest('a'); if (!anchor || !anchor.href.startsWith(window.location.origin) || anchor.target === '_blank' || anchor.pathname === '/' || anchor.pathname === '/index.html') return; event.preventDefault(); const samePage = anchor.pathname === window.location.pathname && anchor.hash; history.pushState({}, '', anchor.pathname + anchor.hash); render(); if (samePage) document.querySelector(anchor.hash)?.scrollIntoView({ behavior: 'smooth' }); });
 window.addEventListener('popstate', render);
 render();
